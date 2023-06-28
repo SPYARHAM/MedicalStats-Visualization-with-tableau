@@ -10,7 +10,7 @@ function BasicEmbed(props) {
 
   const initViz = () => {
     let options = {
-      hideTabs: true,
+      // hideTabs: true,
       // hideToolbar: true,
     };
     let containerDiv = document.getElementById("container");
