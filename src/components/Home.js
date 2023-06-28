@@ -10,7 +10,7 @@ export default function Home() {
       <h1>Welcome to the Tableau DashboardI</h1>
       <p>By Arham Jain</p>
       <p style={indicatorStyle}>👇</p>
-      <a href="https://github.com/SPYARHAM" target="_blank">
+      <a href="https://github.com/SPYARHAM" target="_blank" rel="noreferrer">
         {" "}
         <img id="githubLink" src={gitHubLogo} style={githubStyle} alt="github logo" />
       </a>
