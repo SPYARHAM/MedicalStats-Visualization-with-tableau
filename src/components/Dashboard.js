@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 const { tableau } = window;
 
 function BasicEmbed(props) {
   const [url] = useState(
-    "https://public.tableau.com/app/profile/mdart.dic.pu/viz/HospitalDepartmentsAnalysis_16872489857530/Dashboard5"
+    "https://public.tableau.com/views/MedicalStats/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
   );
   const [viz, setViz] = useState(null);
-  const [option, setOption] = useState("");
+  // const [option, setOption] = useState("");
 
   const initViz = () => {
     let options = {
@@ -18,7 +18,7 @@ function BasicEmbed(props) {
     setViz(new tableau.Viz(containerDiv, url, options));
   };
 
-  useEffect(initViz, []);
+  useEffect(initViz, [url]);
 
   return (
     <div style={containerStyle}>

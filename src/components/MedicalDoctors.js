@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import dashboards from "./VizList";
 const { tableau } = window;
 
 
