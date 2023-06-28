@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 const { tableau } = window;
 
 function Filter() {
-  const [url] = useState("https://public.tableau.com/views/MedicalStats/CancerPatients30-70?:language=en-US&:display_count=n&:origin=viz_share_link");
+  const [url,seturl] = useState("https://public.tableau.com/views/MedicalStats/CancerPatients30-70?:language=en-US&:display_count=n&:origin=viz_share_link");
   const [viz, setViz] = useState(null);
   const [option, setOption] = useState("");
  

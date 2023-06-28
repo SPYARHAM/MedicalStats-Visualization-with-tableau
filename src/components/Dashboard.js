@@ -3,14 +3,14 @@ const { tableau } = window;
 
 function BasicEmbed(props) {
   const [url] = useState(
-    "https://public.tableau.com/views/MedicalStats/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
+    "https://public.tableau.com/app/profile/mdart.dic.pu/viz/HospitalDepartmentsAnalysis_16872489857530/Dashboard5"
   );
   const [viz, setViz] = useState(null);
   const [option, setOption] = useState("");
 
   const initViz = () => {
     let options = {
-      // hideTabs: true,
+      hideTabs: true,
       // hideToolbar: true,
     };
     let containerDiv = document.getElementById("container");
@@ -37,9 +37,13 @@ const containerStyle = {
 const setVizStyle = {
   
     margin: "0 auto", // Add this line to center align the dashboard
-  
-  width: "1440px",
-  height: "670px",
+    width : "100vw",
+    height:"80vh",
+  // width: "1440px",
+  // height: "670px",
+    "& > iframe":{
+      margin:"0 auto"
+    }
 };
 
 export default BasicEmbed;
