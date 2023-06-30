@@ -33,13 +33,13 @@ function Header() {
             <li>
               <Link
                 to={{
-                  pathname: "/dashboard",
+                  pathname: "/story",
                   state: {
-                    title: "Dashboard",
+                    title: "Story",
                   },
                 }}
               >
-                Dashboard
+                Story
               </Link>
             </li>
             <li>

@@ -6,7 +6,7 @@ const TableauEmbed = () => {
   }, []);
 
   const initializeTableau = () => {
-    const vizUrl = "https://public.tableau.com/views/MedicalStats/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link";
+    const vizUrl = "https://public.tableau.com/views/MedicalStats/Story1?:language=en-US&:display_count=n&:origin=viz_share_link";
     const options = {
       hideTabs: true,
       hideToolbar: true,
