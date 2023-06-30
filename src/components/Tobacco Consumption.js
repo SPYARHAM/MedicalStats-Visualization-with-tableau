@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from "react";
-const { tableau } = window;
 
-function GetData() {
-  const [url] = useState("https://public.tableau.com/views/MedicalStats/TobaccoComsumptionfrom15yearsorAbove?:language=en-US&:display_count=n&:origin=viz_share_link");
-  const [viz, setViz] = useState(null);
-  const initViz = () => {
-    let options = {
+
+import React, { useEffect } from "react";
+
+const TableauEmbed = () => {
+  useEffect(() => {
+    initializeTableau();
+  }, []);
+
+  const initializeTableau = () => {
+    const vizUrl = "https://public.tableau.com/views/MedicalStats/TobaccoComsumptionfrom15yearsorAbove?:language=en-US&:display_count=n&:origin=viz_share_link";
+    const options = {
       hideTabs: true,
       hideToolbar: true,
     };
-    let containerDiv = document.getElementById("container");
-    setViz(new tableau.Viz(containerDiv, url, options));
+    const vizContainer = document.getElementById("tableauViz");
+    new window.tableau.Viz(vizContainer, vizUrl, options);
   };
-  useEffect(initViz, []);
+
   return (
-    <div>
-      <div style={setVizStyle} id="container" />
+    <div style={{ width: "1000px", height: "700px" }}>
+      {/* Placeholder for the Tableau visualization. */}
+      <div id="tableauViz"></div>
     </div>
   );
-}
-const setVizStyle = {
-  margin: "25px",
-  width: "1440px",
-  height: "670px"
 };
 
-export default GetData;
+export default TableauEmbed;
+

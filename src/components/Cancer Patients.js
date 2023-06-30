@@ -1,37 +1,26 @@
-import React, { useState, useEffect } from "react";
-const { tableau } = window;
+import React, { useEffect } from "react";
 
-function Filter() {
-  const [url,seturl] = useState("https://public.tableau.com/views/MedicalStats/CancerPatients30-70?:language=en-US&:display_count=n&:origin=viz_share_link");
-  const [viz, setViz] = useState(null);
+const TableauEmbed = () => {
+  useEffect(() => {
+    initializeTableau();
+  }, []);
 
- 
-
-  const initViz = () => {
-    
-    let containerDiv = document.getElementById("container");
-   
-    setViz(new tableau.Viz(containerDiv, url, ));
+  const initializeTableau = () => {
+    const vizUrl = "https://public.tableau.com/views/MedicalStats/CancerPatients30-70?:language=en-US&:display_count=n&:origin=viz_share_link";
+    const options = {
+      hideTabs: true,
+      hideToolbar: true,
+    };
+    const vizContainer = document.getElementById("tableauViz");
+    new window.tableau.Viz(vizContainer, vizUrl, options);
   };
 
-  useEffect(initViz, []);
-
-
   return (
-    <div>
-      <div style={setVizStyle} id="container" />
+    <div style={{ width: "1000px", height: "700px" }}>
+      {/* Placeholder for the Tableau visualization. */}
+      <div id="tableauViz"></div>
     </div>
   );
-}
-
-const setVizStyle = {
-  margin: "25px",
-  width: "1440px",
-  height: "670px"
 };
 
-const selectStyle = {
-  marginLeft: "10px"
-};
-
-export default Filter;
+export default TableauEmbed;

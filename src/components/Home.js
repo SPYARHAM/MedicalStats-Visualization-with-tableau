@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div>
-      <img src={logo} alt="Tableau Image" />
+      <img src={logo} alt="Tableau" />
       <h1>Welcome to the Tableau Dashboard</h1>
       <p>By Arham Jain</p>
       <p style={indicatorStyle}>👇</p>
