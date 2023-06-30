@@ -12,7 +12,7 @@ function Main() {
   return (
     <section>
       <Route path="/" exact component={Home} />
-      <Route path="/dashboard" component={Dashboard1} />
+      <Route path="/Story" component={Dashboard1} />
       <Route path="/Life-Expectancy" component={DynamicLoad} />
       <Route path="/Medical-Doctors" component={MedicalDoctors} />
       <Route path="/Cancer-Patients" component={CancerPatients} />
@@ -33,7 +33,7 @@ function Header() {
             <li>
               <Link
                 to={{
-                  pathname: "/story",
+                  pathname: "/Story",
                   state: {
                     title: "Story",
                   },
